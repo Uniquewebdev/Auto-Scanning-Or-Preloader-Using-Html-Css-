@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader animation </title>
+    <style>
+        *{
+            background:#81ecec;
+            top: 100;  
+            margin-left: 100px;
+             
+        }
+        .loader{
+            color: #454545;
+            font-size: 20px;
+            position: absolute;
+        }
+        .loader h1::before{
+            content: "Loading......";
+            position: absolute;
+            top: 20;
+            left: 0;
+            width: 0;
+            border-right:4px solid#eb4d4b ;
+            overflow: hidden;
+            color:#eb4d4b;
+            animation: load 4s linear infinite;  margin-left: 100px;
+        }
+        @keyframes load{
+            0% , 10% , 100%  {
+                width: 0;
+            }
+            60% , 80%{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <h1>Loading......</h1>
+    </div>
+</body>
+</html>
